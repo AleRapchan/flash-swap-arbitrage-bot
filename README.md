@@ -70,7 +70,9 @@ It does not require any kind of prediction algorithm or stop-loss strategy, but
 An investor can deposit their capital into the system and then let Flash BOT do all the work. FlashBot will restlessly watch the best opportunities in the crypto market/space 24/7 running precisely in every millisecond to bring profit.
 
 
-# Author
+# :mailbox: About the Project
+
+## Author
 
 Name  | Git Hub | LinkedIn | Twitter
 ------------- | ------------- | ------------- | -------------
@@ -90,5 +92,25 @@ Date  |  Revision  |  Description  |  Author
 - [Financial Services Regulatory Authority of Ontario - Claims Process](http://fsrao.ca/consumers/auto-insurance/after-accident-understanding-claims-process)
 - [Hyperledger Fabric Key Concepts](https://hyperledger-fabric.readthedocs.io/fa/latest/key_concepts.html)
 
+## MIT License
 
+Copyright (c) 2021 Rapchan
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
