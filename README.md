@@ -1,5 +1,5 @@
 # Flash Swap Arbitrage Bot
-Smart Contract BOT code, running on Ethereum Blockchain, watching for and executing profitable arbitrage opportunities using flash loans and flash swaps.
+Smart Contract BOT code, running on Ethereum Blockchain, watching for and executing profitable arbitrage opportunities using flash loans and flash swaps. For full documentation please access this link: https://app.gitbook.com/@rapchan/s/flash-bot/
 
 ![Logo](https://alexandrebarros.com/global/flash-alfred/FlashAlfred-Git-Hero.png?alt=flash-alfred-intro)
 
