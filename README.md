@@ -70,7 +70,7 @@ It does not require any kind of prediction algorithm or stop-loss strategy, but
 An investor can deposit their capital into the system and then let Flash BOT do all the work. FlashBot will restlessly watch the best opportunities in the crypto market/space 24/7 running precisely in every millisecond to bring profit.
 
 
-# :mailbox: About the Project
+# About the Project
 
 ## Author
 
