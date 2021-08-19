@@ -57,6 +57,11 @@ It does not require any kind of prediction algorithm or stop-loss strategy, but
 # What makes Flash Alfred Special
 ![Logo](https://alexandrebarros.com/global/flash-alfred/flash-alfred-benefits.png?alt=flash-alfred-benefits)
 
+# Features
+- Smart contract written in solidity code published in the Ethereum blockchain main network;
+- Connected with UniSwap and SushiSwap, two of the principal decentralized exchanges in DeFi;
+- API connected with AAVE loan network;
+
 ## Authors
 
 Name  | Git Hub | LinkedIn | Twitter
