@@ -66,6 +66,10 @@ It does not require any kind of prediction algorithm or stop-loss strategy, but
 - Connected with UniSwap and SushiSwap, two of the principal decentralized exchanges in DeFi;
 - API connected with AAVE loan network;
 
+## Screen Shot
+![Logo](http://alexandrebarros.com/global/TokenFactory_ScreenShot.png)
+
+
 # How to get started
 An investor can deposit their capital into the system and then let Flash BOT do all the work. FlashBot will restlessly watch the best opportunities in the crypto market/space 24/7 running precisely in every millisecond to bring profit.
 
