@@ -57,5 +57,25 @@ It does not require any kind of prediction algorithm or stop-loss strategy, but
 # What makes Flash Alfred Special
 ![Logo](https://alexandrebarros.com/global/flash-alfred/flash-alfred-benefits.png?alt=flash-alfred-benefits)
 
+## Authors
+
+Name  | Git Hub | LinkedIn | Twitter
+------------- | ------------- | ------------- | -------------
+Alexandre Rapchan B. Barros  | [@AleRapchan](https://www.github.com/AleRapchan) | [Alexandre-rapchan](https://www.linkedin.com/in/alexandre-rapchan/) | [@rapchan](https://www.twitter.com/rapchan/) 
+
+## Support
+
+For support, email blockchain@alexandrebarros.com or join our Slack channel.
+	
+## Revisions
+Date  |  Revision  |  Description  |  Author
+--------  |  --------  |  --------  |  --------	
+05/08/2021  |  `0.1`  |  First Draft  |  Alexandre Rapchan B. Barros
+20/08/2021  |  `0.2`  |  Final Review  |  Alexandre Rapchan B. Barros
+
+## Links
+- [Financial Services Regulatory Authority of Ontario - Claims Process](http://fsrao.ca/consumers/auto-insurance/after-accident-understanding-claims-process)
+- [Hyperledger Fabric Key Concepts](https://hyperledger-fabric.readthedocs.io/fa/latest/key_concepts.html)
+
 
 
