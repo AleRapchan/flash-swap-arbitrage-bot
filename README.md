@@ -11,3 +11,10 @@ Decentralized Exchanges (DEXes) like Uniswap and Sushiswap are cryptocurrency ex
 Arbitrage is arguably the primary use case for flash loans, which means buying cryptocurrency (or an asset) for a price and selling it for a higher price on a different exchange.
 
 The main challenge with arbitrage is that by the time you sell an asset, its price might have changed, but you don’t have that problem with flash loans. Additionally, you don’t have to have the crypto asset; you can borrow it. Therefore, the earning coming from the price difference (spread) will be proportional to the amount traded.
+
+# Disclaimer
+This presentation is not either an investment advice or a recommendation or solicitation to buy or sell any investment and should not be used in the evaluation of the merits of making any investment decision. It should not be relied upon for accounting, legal or tax advice or investment recommendations. The contents reflected herein are subject to change without being updated. The codes are written for informational and educational purpose only.
+
+USE THE SOFTWARE AT YOUR OWN RISK. YOU ARE RESPONSIBLE FOR YOUR OWN MONEY. PAST PERFORMANCE IS NOT NECESSARILY INDICATIVE OF FUTURE RESULTS.
+THE AUTHORS AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR YOUR TRADING RESULTS.
+
