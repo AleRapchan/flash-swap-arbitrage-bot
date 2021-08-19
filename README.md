@@ -1,8 +1,8 @@
-# Flash Swap Arbitrage Bot
-Smart Contract BOT code, running on Ethereum Blockchain, watching for and executing profitable arbitrage opportunities using flash loans and flash swaps. For full documentation please access this link: https://rapchan.gitbook.io/flash-bot/ https://app.gitbook.com/@rapchan/s/flash-bot/
 
 ![Logo](https://alexandrebarros.com/global/flash-alfred/FlashAlfred-Git-Hero.png?alt=flash-alfred-intro)
 
+# Flash Swap Arbitrage Bot
+Smart Contract BOT code, running on Ethereum Blockchain, watching for and executing profitable arbitrage opportunities using flash loans and flash swaps. For full documentation please access this link: https://rapchan.gitbook.io/flash-bot/ https://app.gitbook.com/@rapchan/s/flash-bot/
 
 Flash loans are an innovative financial product made possible by the atomic nature of transactions on the Ethereum blockchain. They allow users to borrow large amounts of cryptocurrency from liquidity pools without collateral if the loan is repaid in the same transaction. They are like leverage trades and margin accounts in traditional finance, but without the need to be approved and provide collateral.  
  
