@@ -93,7 +93,7 @@ Date  |  Revision  |  Description  |  Author
 20/08/2021  |  `0.2`  |  Final Review  |  Alexandre Rapchan B. Barros
 
 ## Links
-- This Truffle box comes with everything you need to start [developing on flash loans](https://docs.aave.com/developers/tutorials/performing-a-flash-loan/)
+- [Developing on flash loans](https://docs.aave.com/developers/tutorials/performing-a-flash-loan/)
 - [Truffle Mint DAI](https://github.com/ryanio/truffle-mint-dai/blob/master/test/dai.js)
 - [Swap Tokens With 0x API](https://0x.org/docs/guides/swap-tokens-with-0x-api)
 
