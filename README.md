@@ -59,7 +59,7 @@ There is no risk of losing money should a sequence of trades not execute as exp
 It does not require any kind of prediction algorithm or stop-loss strategy, but rather it deals with finding profitable opportunities in the present moment before they disappear .
 
 # What makes Flash Alfred Special
-![Logo](https://alexandrebarros.com/global/flash-alfred/flash-alfred-benefits-new.png?alt=flash-alfred-benefits)
+![Logo](https://alexandrebarros.com/global/flash-alfred/flash-alfred-benefits-new-02.png?alt=flash-alfred-benefits)
 
 # Features
 - Smart contract written in solidity code published in the Ethereum blockchain main network;
