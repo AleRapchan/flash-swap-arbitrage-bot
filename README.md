@@ -93,8 +93,9 @@ Date  |  Revision  |  Description  |  Author
 20/08/2021  |  `0.2`  |  Final Review  |  Alexandre Rapchan B. Barros
 
 ## Links
-- [Financial Services Regulatory Authority of Ontario - Claims Process](http://fsrao.ca/consumers/auto-insurance/after-accident-understanding-claims-process)
-- [Hyperledger Fabric Key Concepts](https://hyperledger-fabric.readthedocs.io/fa/latest/key_concepts.html)
+- This Truffle box comes with everything you need to start [developing on flash loans](https://docs.aave.com/developers/tutorials/performing-a-flash-loan/)
+- [Truffle Mint DAI](https://github.com/ryanio/truffle-mint-dai/blob/master/test/dai.js)
+- [Swap Tokens With 0x API](https://0x.org/docs/guides/swap-tokens-with-0x-api)
 
 ## MIT License
 
