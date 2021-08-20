@@ -1,0 +1,426 @@
+{
+  "contractName": "ILendingPoolAddressesProvider",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getLendingPoolCore",
+      "outputs": [
+        {
+          "internalType": "address payable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getLendingPool",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getLendingPool\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getLendingPoolCore\",\"outputs\":[{\"internalType\":\"address payable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"title\":\"ILendingPoolAddressesProvider interface\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"notice\":\"provides the interface to fetch the LendingPoolCore address\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/aave/ILendingPoolAddressesProvider.sol\":\"ILendingPoolAddressesProvider\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/aave/ILendingPoolAddressesProvider.sol\":{\"keccak256\":\"0x4e412ec7393ad2c1c2cb160a2d636c014be6e9b9d6b8f896766222f5ba3af8ec\",\"urls\":[\"bzz-raw://2fa3d51b5cb5060dd4a4005fe0cfa9690a5686dc1be8215414c3c90c12d99202\",\"dweb:/ipfs/QmW6DyeCYsnoKEQArnRWo1Meevpjg6VwmuViVZAsnvofLo\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.6.6;\n\n/**\n    @title ILendingPoolAddressesProvider interface\n    @notice provides the interface to fetch the LendingPoolCore address\n */\n\ninterface ILendingPoolAddressesProvider {\n    function getLendingPoolCore() external view returns (address payable);\n    function getLendingPool() external view returns (address);\n}",
+  "sourcePath": "/Users/alexandrebarros/Documents/Code/GBC/dApp2/Capstone/Code/flashloan-box-master/contracts/aave/ILendingPoolAddressesProvider.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/aave/ILendingPoolAddressesProvider.sol",
+    "exportedSymbols": {
+      "ILendingPoolAddressesProvider": [
+        1684
+      ]
+    },
+    "id": 1685,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1672,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".6"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:12"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 1673,
+          "nodeType": "StructuredDocumentation",
+          "src": "25:130:12",
+          "text": "@title ILendingPoolAddressesProvider interface\n@notice provides the interface to fetch the LendingPoolCore address"
+        },
+        "fullyImplemented": false,
+        "id": 1684,
+        "linearizedBaseContracts": [
+          1684
+        ],
+        "name": "ILendingPoolAddressesProvider",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "ed6ff760",
+            "id": 1678,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLendingPoolCore",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1674,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "230:2:12"
+            },
+            "returnParameters": {
+              "id": 1677,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1676,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1678,
+                  "src": "256:15:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "typeName": {
+                    "id": 1675,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "256:15:12",
+                    "stateMutability": "payable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "255:17:12"
+            },
+            "scope": 1684,
+            "src": "203:70:12",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "0261bf8b",
+            "id": 1683,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLendingPool",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 1679,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "301:2:12"
+            },
+            "returnParameters": {
+              "id": 1682,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1681,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 1683,
+                  "src": "327:7:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1680,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "327:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "326:9:12"
+            },
+            "scope": 1684,
+            "src": "278:58:12",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 1685,
+        "src": "157:181:12"
+      }
+    ],
+    "src": "0:338:12"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/aave/ILendingPoolAddressesProvider.sol",
+      "exportedSymbols": {
+        "ILendingPoolAddressesProvider": [
+          1684
+        ]
+      },
+      "license": null
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.6",
+            ".6"
+          ]
+        },
+        "id": 1672,
+        "name": "PragmaDirective",
+        "src": "0:23:12"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            1684
+          ],
+          "name": "ILendingPoolAddressesProvider",
+          "scope": 1685
+        },
+        "children": [
+          {
+            "attributes": {
+              "text": "@title ILendingPoolAddressesProvider interface\n@notice provides the interface to fetch the LendingPoolCore address"
+            },
+            "id": 1673,
+            "name": "StructuredDocumentation",
+            "src": "25:130:12"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "ed6ff760",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getLendingPoolCore",
+              "overrides": null,
+              "scope": 1684,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1674,
+                "name": "ParameterList",
+                "src": "230:2:12"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 1678,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address payable",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "payable",
+                          "type": "address payable"
+                        },
+                        "id": 1675,
+                        "name": "ElementaryTypeName",
+                        "src": "256:15:12"
+                      }
+                    ],
+                    "id": 1676,
+                    "name": "VariableDeclaration",
+                    "src": "256:15:12"
+                  }
+                ],
+                "id": 1677,
+                "name": "ParameterList",
+                "src": "255:17:12"
+              }
+            ],
+            "id": 1678,
+            "name": "FunctionDefinition",
+            "src": "203:70:12"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": null,
+              "functionSelector": "0261bf8b",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getLendingPool",
+              "overrides": null,
+              "scope": 1684,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 1679,
+                "name": "ParameterList",
+                "src": "301:2:12"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 1683,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "stateMutability": "nonpayable",
+                          "type": "address"
+                        },
+                        "id": 1680,
+                        "name": "ElementaryTypeName",
+                        "src": "327:7:12"
+                      }
+                    ],
+                    "id": 1681,
+                    "name": "VariableDeclaration",
+                    "src": "327:7:12"
+                  }
+                ],
+                "id": 1682,
+                "name": "ParameterList",
+                "src": "326:9:12"
+              }
+            ],
+            "id": 1683,
+            "name": "FunctionDefinition",
+            "src": "278:58:12"
+          }
+        ],
+        "id": 1684,
+        "name": "ContractDefinition",
+        "src": "157:181:12"
+      }
+    ],
+    "id": 1685,
+    "name": "SourceUnit",
+    "src": "0:338:12"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-08-18T16:56:30.742Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "title": "ILendingPoolAddressesProvider interface",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "notice": "provides the interface to fetch the LendingPoolCore address",
+    "version": 1
+  }
+}

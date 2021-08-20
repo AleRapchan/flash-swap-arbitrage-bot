@@ -1,122 +1,96 @@
+# Aave Flash Loan Truffle Box
 
-![Logo](https://alexandrebarros.com/global/flash-alfred/FlashAlfred-Git-Hero.png?alt=flash-alfred-intro)
+This Truffle box comes with everything you need to start [developing on flash loans](https://docs.aave.com/developers/tutorials/performing-a-flash-loan/...-with-truffle)
 
-# Flash Swap Arbitrage Bot
-Smart Contract BOT code, running on Ethereum Blockchain, watching for and executing profitable arbitrage opportunities using flash loans and flash swaps. For full documentation please access this link: https://rapchan.gitbook.io/flash-bot/ https://app.gitbook.com/@rapchan/s/flash-bot/
+## Installation and Setup
 
-Flash loans are an innovative financial product made possible by the atomic nature of transactions on the Ethereum blockchain. They allow users to borrow large amounts of cryptocurrency from liquidity pools without collateral if the loan is repaid in the same transaction. They are like leverage trades and margin accounts in traditional finance, but without the need to be approved and provide collateral.  
- 
-Decentralized Exchanges (DEXes) like Uniswap and Sushiswap are cryptocurrency exchanges that use smart contracts to enforce the trading rules, execute trades, and securely handle funds when necessary. They allow us to exchange different cryptocurrencies and stable coins quickly. They may be used as part of flash loan strategies to acquire the needed assets.
+0. Install Truffle globally, if not already installed.
+    ```
+    npm install -g truffle@latest
+    ```
+    Note: there is an issue with some older Truffle versions, e.g. v.5.1.25.
+    **This truffle box is confirmed working with the latest version (Truffle v5.1.32)**
+1. Download the box.
+    ```
+    truffle unbox aave/flashloan-box
+    ```
+2. Rename the `env` file to `.env` and edit the following values in the file:
+    - Sign up for [Infura](https://infura.io/) (or a similar provider) and replace `YOUR_INFURA_KEY` with an API key for your project (this is called Project ID in the Infra dashboard).
+    - Replace `YOUR_ACCOUNT_KEY_FOR_DEPLOYMENT` with the private key of the ethereum account you will be using to deploy the contracts. This account will become the `owner` of the contract.
+3. Ensure your ethereum account has some ETH to deploy the contract.
+4. In your terminal, navigate to your repo directory and install the dependencies (if not already done):
+    ```
+    npm install
+    ```
+5. In the same terminal, replace `NAME_OF_YOUR_NETWORK` with either `kovan`, `ropsten`, or `mainnet` (depending on where you want to deploy the contract):
+    ```
+    truffle console --network NAME_OF_YOUR_NETWORK
+    ```
+6. You are now connected to the network you chose. In the same terminal window:
+    ```
+    migrate --reset
+    ```
+7. After a few minutes, your contract will be deployed on your chosen network.
+    - If you have not added any profitable logic to `Flashloan.sol` line 23, then you will need to fund your contract with the desired asset.
+    - See our [documentation](https://docs.aave.com/developers/developing-on-aave/deployed-contract-instances#reserves-assets) for token address and faucets.
+8. Call your contract's flashloan function within the truffle console, replacing `RESERVE_ADDRESS` with the [reserve address](https://docs.aave.com/developers/developing-on-aave/deployed-contract-instances#reserves-assets) found in our documentation:
+    ```
+    let f = await Flashloan.deployed()
+    await f.flashloan(RESERVE_ADDRESS)
+    ```
+    - if the above operation takes an unreasonably long time or timesout, try `CTRL+C` to exit the Truffle console, repeat step 5, then try this step agin. You may need to wait a few blocks before your node can 'see' the deployed contract.
+9. If you've successfully followed the above steps, then congratulations, you've just made a flash loan.
+    - For reference, here is an [example transaction](https://ropsten.etherscan.io/tx/0x7877238373ffface4fb2b98ca4db1679c64bc2c84c7754432aaab994a9b51e17) that followed the above steps on `Ropsten` using **Dai**.
+    - For reference, here is an [example transaction](https://ropsten.etherscan.io/tx/0x32eb3e03e00803dc19a7d2edd0a0a670756fbe210be81697be312518baeb16cc) that followed the above steps on `Ropsten` using **ETH**.
 
-Arbitrage is arguably the primary use case for flash loans, which means buying cryptocurrency (or an asset) for a price and selling it for a higher price on a different exchange.
+## Setup for cross protocol flash lending
+If you are working across protocols, such as using the flash loaned amount on another #DeFi protocol, sometimes it is easier to fork mainnet and use each protocol's production contracts and production ERC20 tokens.
 
-The main challenge with arbitrage is that by the time you sell an asset, its price might have changed, but you don’t have that problem with flash loans. Additionally, you don’t have to have the crypto asset; you can borrow it. Therefore, the earning coming from the price difference (spread) will be proportional to the amount traded.
+1. Follow the steps 0 --> step 4 from above.
+2. (Install and) Run [Ganache](https://www.trufflesuite.com/ganache), preferably the [CLI version](https://github.com/trufflesuite/ganache-cli)
+3. In `truffle-config.js`, ensure the details for the `development` network match up with your running Ganache instance.
+4. To minimise set up steps with Aave's lending pools, use Ganache's fork feature. This will 'fork' mainnet into your Ganache instance.
+    Open terminal, replace `YOUR_INFURA_KEY` (this is called Project ID in the Infra dashboard) in the following and run:
+    ```
+    ganache-cli --fork https://mainnet.infura.io/v3/YOUR_INFURA_KEY -i 1
+    ```
+5. In a new terminal window in your repo directory, run:
+    ```
+    truffle console
+    ```
+6. Migrate your Flashloan contract to your instance of Ganache with:
+    ```
+    migrate --reset
+    ```
+7. After a few minutes, your contract will be deployed.
+    - If you have not added any profitable logic to `Flashloan.sol` line 23, then you will need to fund your contract with the desired asset.
+    - See our [documentation](https://docs.aave.com/developers/developing-on-aave/deployed-contract-instances#reserves-assets) for token address and faucets.
+8. Your contract is now deployed on your local Ganache, which is mirroring mainnet. Call your contract's flashloan function within the truffle console, replacing `RESERVE_ADDRESS` with the [reserve address](https://docs.aave.com/developers/developing-on-aave/deployed-contract-instances#reserves-assets) found in our documentation:
+    ```
+    let f = await Flashloan.deployed()
+    await f.flashloan(RESERVE_ADDRESS)
+    ```
+    Be patient as your ganache instance works its magic.
 
-# Disclaimer
-This presentation is not either an investment advice or a recommendation or solicitation to buy or sell any investment and should not be used in the evaluation of the merits of making any investment decision. It should not be relied upon for accounting, legal or tax advice or investment recommendations. The contents reflected herein are subject to change without being updated. The codes are written for informational and educational purpose only.
+9. If your implementation is correct, then the transaction will succeed. If it fails/reverts, a reason will be given.
 
-USE THE SOFTWARE AT YOUR OWN RISK. YOU ARE RESPONSIBLE FOR YOUR OWN MONEY. PAST PERFORMANCE IS NOT NECESSARILY INDICATIVE OF FUTURE RESULTS.
-THE AUTHORS AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR YOUR TRADING RESULTS.
+## Known issues
+### No access to archive state errors
+If you are using Ganache to fork a network, then you may have issues with the blockchain archive state every 30 minutes. This is due to your node provider (i.e. Infura) only allowing free users access to 30 minutes of archive state. To solve this, upgrade to a paid plan, or simply restart your ganache instance and redploy your contracts.
 
-# Full Documentation
-You can find the full documentation for this project following this link:
-- [Full Documentation](https://rapchan.gitbook.io/flash-bot/)
-
-# Organization Background
-Flash Alfred is a B-Corp solution, a company with experience in Bot's development for centralized crypto exchanges that now focuses on utilizing all its knowledge in the DeFi world, offering an arbitrage system capable of providing continuous profit without risk for investors.
-
-# Outline of Problem
-Investors want to :
-- Monetize their savings with high gains 
-- Minimal or no risk at all. 
-- No intermediaries
-Bank's system can’t offer that, and other traditional methods have too many intermediaries and take too long to make ROI even satisfying. 
-
-# The Solution
-The new generation of automated BOT for Crypto Investments
-A combination of the latest computer languages, blockchain technology, Defi concepts, DEX Exchanges protocol, and brand-new concepts like flash loans and flash swap work together and automatize complex processes to deliver a secure, fast and profitable mechanism.
-
-# How it works
-Alfred monitors DEXs for opportunities, and when he finds it, he borrows capital to conclude the arbitrage transaction.
-
-## Decentralized Exchanges
-The most popular DEX architectures use the concept of liquidity pools rather than orderbooks and are called Automated Market Makers.
-
-Other DEXes, in particular those using the 0x protocol use a classic orderbook and rely on makers and takers for determining an asset’s price;
-
-## Flash Loan
-Flash Alfred can take advantage of flash loans in order to do arbitrage trading using only borrowed funds!
-
-Not only you are not at risk of losing all of your capital if prices are very volatile, but also because as mentioned before, the money isn’t even yours; 
-
-“Flash Loans are special uncollateralised loans that allow the borrowing of an asset, as long as the borrowed amount (and a fee) is returned before the end of the transaction. There is no real-world analogy to Flash Loans”.
-
-## Arbitrage on DeFi
-Arbitrage is the purchase and sale of an asset in order to profit from a difference in the asset’s price between marketplaces. 
-
-There is no risk of losing money should a sequence of trades not execute as expected; the transactions will be reverted due to lack of funds, because the smart contract isn’t able to repay a flash loan or before others do.
-
-It does not require any kind of prediction algorithm or stop-loss strategy, but rather it deals with finding profitable opportunities in the present moment before they disappear .
-
-# What makes Flash Alfred Special
-![Logo](https://alexandrebarros.com/global/flash-alfred/flash-alfred-benefits-new-02.png?alt=flash-alfred-benefits)
-
-# Features
-- Smart contract written in solidity code published in the Ethereum blockchain main network;
-- Connected with UniSwap and SushiSwap, two of the principal decentralized exchanges in DeFi;
-- API connected with AAVE loan network;
-
-## Screen Shot
-![Logo](http://alexandrebarros.com/global/flash-alfred/Screen1.png)
-![Logo](http://alexandrebarros.com/global/flash-alfred/Screen2.png)
+### Unable to debug executeOperation() with mainnet ganache fork
+The Truffle debugger does not work too well with proxy / complex calls. You may find that the Truffle debugger returns an error such as:
+```
+TypeError: Cannot read property 'version' of undefined
+at ...
+```
+- In this case you can try calling your `executeOperation()` function directly, instead of having Aave's `LendingPool` contract invoke the function. This will allow you to debug the function directly, however you will need to supply the relevant parameters (e.g. `_amount`, `_fee`, `_reserve`, etc).
+- Alternatively, see the 'Troubleshooting' link.
 
 
-# How to get started
-An investor can deposit their capital into the system and then let Flash BOT do all the work. FlashBot will restlessly watch the best opportunities in the crypto market/space 24/7 running precisely in every millisecond to bring profit.
+## Troubleshooting
+See our [Troubleshooting Errors](https://docs.aave.com/developers/tutorials/troubleshooting-errors) documentation.
 
-
-# About the Project
-
-## Author
-
-Name  | Git Hub | LinkedIn | Twitter
-------------- | ------------- | ------------- | -------------
-Alexandre Rapchan B. Barros  | [@AleRapchan](https://www.github.com/AleRapchan) | [Alexandre-rapchan](https://www.linkedin.com/in/alexandre-rapchan/) | [@rapchan](https://www.twitter.com/rapchan/) 
-
-## Support
-
-For support, please send an email to blockchain@alexandrebarros.com.
-	
-## Revisions
-Date  |  Revision  |  Description  |  Author
---------  |  --------  |  --------  |  --------	
-05/08/2021  |  `0.1`  |  First Draft  |  Alexandre Rapchan B. Barros
-20/08/2021  |  `0.2`  |  Final Review  |  Alexandre Rapchan B. Barros
-
-## Links
-- [Developing on flash loans](https://docs.aave.com/developers/tutorials/performing-a-flash-loan/)
-- [Truffle Mint DAI](https://github.com/ryanio/truffle-mint-dai/blob/master/test/dai.js)
-- [Swap Tokens With 0x API](https://0x.org/docs/guides/swap-tokens-with-0x-api)
-
-## MIT License
-
-Copyright (c) 2021 Rapchan
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
+# Resources
+ - Our [flash loan documentation](https://docs.aave.com/developers/tutorials/performing-a-flash-loan)
+ - Our [Developer Discord channel](https://discord.gg/CJm5Jt3)
