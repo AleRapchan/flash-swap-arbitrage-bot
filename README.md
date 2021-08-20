@@ -67,7 +67,8 @@ It does not require any kind of prediction algorithm or stop-loss strategy, but
 - API connected with AAVE loan network;
 
 ## Screen Shot
-![Logo](http://alexandrebarros.com/global/TokenFactory_ScreenShot.png)
+![Logo](http://alexandrebarros.com/global/flash-alfred/Screen1.png)
+![Logo](http://alexandrebarros.com/global/flash-alfred/Screen2.png)
 
 
 # How to get started
