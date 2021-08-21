@@ -1,7 +1,13 @@
 ![Logo](https://alexandrebarros.com/global/flash-alfred/FlashAlfred-Git-Hero.png?alt=flash-alfred-intro)
 
 # Full Documentation
-Diagrams and Use Cases can be found in this folder https://github.com/AleRapchan/flash-swap-arbitrage-bot/tree/main/documentation but please access the full documentation for this project, including the video presentation, following this link: [Full Documentation](https://rapchan.gitbook.io/flash-bot/)
+Diagrams and Use Cases can be found in this folder https://github.com/AleRapchan/flash-swap-arbitrage-bot/tree/main/documentation but please access the full documentation for this project, including the video presentation, following this link: [Full Documentation](https://rapchan.gitbook.io/flash-bot/) 👈
+
+# Disclaimer
+This presentation is not either an investment advice or a recommendation or solicitation to buy or sell any investment and should not be used in the evaluation of the merits of making any investment decision. It should not be relied upon for accounting, legal or tax advice or investment recommendations. The contents reflected herein are subject to change without being updated. The codes are written for informational and educational purpose only.
+
+USE THE SOFTWARE AT YOUR OWN RISK. YOU ARE RESPONSIBLE FOR YOUR OWN MONEY. PAST PERFORMANCE IS NOT NECESSARILY INDICATIVE OF FUTURE RESULTS.
+THE AUTHORS AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR YOUR TRADING RESULTS.
 
 # Flash Swap Arbitrage Bot
 Smart Contract BOT code, running on Ethereum Blockchain, watching for and executing profitable arbitrage opportunities using flash loans and flash swaps. 
@@ -13,13 +19,6 @@ Decentralized Exchanges (DEXes) like Uniswap and Sushiswap are cryptocurrency ex
 Arbitrage is arguably the primary use case for flash loans, which means buying cryptocurrency (or an asset) for a price and selling it for a higher price on a different exchange.
 
 The main challenge with arbitrage is that by the time you sell an asset, its price might have changed, but you don’t have that problem with flash loans. Additionally, you don’t have to have the crypto asset; you can borrow it. Therefore, the earning coming from the price difference (spread) will be proportional to the amount traded.
-
-# Disclaimer
-This presentation is not either an investment advice or a recommendation or solicitation to buy or sell any investment and should not be used in the evaluation of the merits of making any investment decision. It should not be relied upon for accounting, legal or tax advice or investment recommendations. The contents reflected herein are subject to change without being updated. The codes are written for informational and educational purpose only.
-
-USE THE SOFTWARE AT YOUR OWN RISK. YOU ARE RESPONSIBLE FOR YOUR OWN MONEY. PAST PERFORMANCE IS NOT NECESSARILY INDICATIVE OF FUTURE RESULTS.
-THE AUTHORS AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR YOUR TRADING RESULTS.
-
 
 # Organization Background
 Flash Alfred is a B-Corp solution, a company with experience in Bot's development for centralized crypto exchanges that now focuses on utilizing all its knowledge in the DeFi world, offering an arbitrage system capable of providing continuous profit without risk for investors.
