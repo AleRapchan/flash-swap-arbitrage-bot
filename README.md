@@ -1,5 +1,8 @@
 ![Logo](https://alexandrebarros.com/global/flash-alfred/FlashAlfred-Git-Hero.png?alt=flash-alfred-intro)
 
+# Full Documentation
+Diagrams and Use Cases can be found in this folder https://github.com/AleRapchan/flash-swap-arbitrage-bot/tree/main/documentation but please access the full documentation for this project, including the video presentation, following this link: [Full Documentation](https://rapchan.gitbook.io/flash-bot/)
+
 # Flash Swap Arbitrage Bot
 Smart Contract BOT code, running on Ethereum Blockchain, watching for and executing profitable arbitrage opportunities using flash loans and flash swaps. 
 
@@ -16,13 +19,6 @@ This presentation is not either an investment advice or a recommendation or soli
 
 USE THE SOFTWARE AT YOUR OWN RISK. YOU ARE RESPONSIBLE FOR YOUR OWN MONEY. PAST PERFORMANCE IS NOT NECESSARILY INDICATIVE OF FUTURE RESULTS.
 THE AUTHORS AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR YOUR TRADING RESULTS.
-
-# Full Documentation
-You can find the full documentation for this project following this link:
-- [Full Documentation](https://rapchan.gitbook.io/flash-bot/)
-
-Diagrams and Use Cases can also be found in this folder: https://github.com/AleRapchan/flash-swap-arbitrage-bot/tree/main/documentation.
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/Zc8RSkC9fOo/0.jpg)](https://youtu.be/Zc8RSkC9fOo)
 
 
 # Organization Background
