@@ -21,7 +21,7 @@ THE AUTHORS AND ALL AFFILIATES ASSUME NO RESPONSIBILITY FOR YOUR TRADING RESULTS
 You can find the full documentation for this project following this link:
 - [Full Documentation](https://rapchan.gitbook.io/flash-bot/)
 
-Diagrams and use cases can also be found at this folder: https://github.com/AleRapchan/flash-swap-arbitrage-bot/tree/main/documentation.
+Diagrams and Use Cases can also be found in this folder: https://github.com/AleRapchan/flash-swap-arbitrage-bot/tree/main/documentation.
 
 # Organization Background
 Flash Alfred is a B-Corp solution, a company with experience in Bot's development for centralized crypto exchanges that now focuses on utilizing all its knowledge in the DeFi world, offering an arbitrage system capable of providing continuous profit without risk for investors.
