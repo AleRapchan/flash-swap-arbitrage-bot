@@ -1,3 +1,11 @@
+********************************************************************
+Note: This repo is not under maintenning. 
+This repo is written only for POC. The bot is implemented simply for demostration.
+If you want access a commercial version of the Arbitrage BOT, please send me an email. Thanks!
+********************************************************************
+
+
+
 ![Logo](https://alexandrebarros.com/global/flash-alfred/FlashAlfred-Git-Hero.png?alt=flash-alfred-intro)
 
 # Full Documentation
